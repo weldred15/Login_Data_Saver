@@ -1,0 +1,36 @@
+entry-row:hover {
+    background: #f5f5f5;
+}
+
+.password-dots {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.edit-btn {
+    padding: 6px 12px;
+    background: #2196F3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.edit-btn:hover {
+    background: #0b7dda;
+}
+
+.delete-btn {
+    padding: 6px 12px;
+    background: #f44336;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background: #da190b;
+}
