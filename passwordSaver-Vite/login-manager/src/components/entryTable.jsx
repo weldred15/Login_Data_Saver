@@ -17,16 +17,16 @@ function EntryTable({ entries, editingId, onEdit, onSave, onCancelEdit, onDelete
                 </thead>
                 <tbody>
                 {entries.map((entry) => (
-                    editingId === entry.id ? (
+                    editingId === entry.dataId ? (
                         <EditableRow
-                            key={entry.id}
+                            key={entry.dataId}
                             entry={entry}
                             onSave={onSave}
                             onCancel={onCancelEdit}
                         />
                     ) : (
                         <EntryRow
-                            key={entry.id}
+                            key={entry.dataId}
                             entry={entry}
                             onEdit={onEdit}
                             onDelete={onDelete}

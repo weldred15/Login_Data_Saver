@@ -14,7 +14,7 @@ function DeletePopup({ isOpen, entry, onConfirm, onCancel }) {
                 <p className="warning">This action cannot be undone.</p>
 
                 <div className="delete-actions">
-                    <button className="delete-confirm-btn" onClick={() => onConfirm(entry.id)}>
+                    <button className="delete-confirm-btn" onClick={() => onConfirm(entry.dataId)}>
                         Delete
                     </button>
                     <button className="delete-cancel-btn" onClick={onCancel}>
