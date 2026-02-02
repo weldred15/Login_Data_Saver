@@ -3,7 +3,6 @@ import AddEntry from './components/addEntry';
 import EntryTable from './components/entryTable';
 import DeletePopup from './components/deletePopup';
 import BackgroundAlteringComponent from './components/backgroundAlteringComponent';
-import Settings from "./components/settings";
 import { api } from './services/api';
 import './App.css';
 
