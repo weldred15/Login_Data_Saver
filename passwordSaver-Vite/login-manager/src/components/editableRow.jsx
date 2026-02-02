@@ -8,7 +8,7 @@ function EditableRow({ entry, onSave, onCancel }) {
     });
 
     const handleSave = () => {
-        onSave(entry.id, editData);
+        onSave(entry.dataId, editData);
     };
 
     return (
