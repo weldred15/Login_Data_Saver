@@ -12,6 +12,7 @@ function EntryTable({ entries, editingId, onEdit, onSave, onCancelEdit, onDelete
                     <th>Username</th>
                     <th>Password</th>
                     <th>Notes</th>
+                    <th>Date Added</th>
                     <th>Actions</th>
                 </tr>
                 </thead>

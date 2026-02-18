@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import img from '../assets/colors.png'
 import './backgroundAlteringComponent.css';
+//import { SavePreset } from '../utils/savePreset';
 
 function BackgroundAlteringComponent({ onSettingsChange }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -26,8 +27,10 @@ function BackgroundAlteringComponent({ onSettingsChange }) {
 
             {isOpen && (
                 <div className="customizer-panel">
-                    <h3>Background Settings</h3>
-                    <button onClick={()=> setIsOpen(!isOpen)}>x</button>
+                    <div className="customizer-panel-header">
+                        <h3>Background Settings</h3>
+                        <button className='exit-btn' onClick={()=> setIsOpen(!isOpen)}>x</button>
+                    </div>
                     <div className="control-group">
                         <label>Color 1</label>
                         <div className="color-input-group">

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import  { useState } from 'react';
 import { INITIAL_ENTRY_STATE } from '../utils/constants';
 import './addEntry.css';
 

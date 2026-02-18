@@ -26,13 +26,12 @@ customizer-toggle {
     padding: 20px;
     border-radius: 12px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    width: 300px;
+    width: 325px;
     z-index: 1000;
 }
 
 .customizer-panel h3 {
     margin-top: 0;
-    margin-bottom: 20px;
     color: #333;
 }
 
@@ -136,4 +135,25 @@ input[type="range"]::-moz-range-thumb {
 
 .alter-bg-btn:hover {
     transform: scale(1.1);
+}
+
+.customizer-panel-header{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.exit-btn{
+    background: red;
+    width: 25px;
+    height: 25px;
+    color: white;
+    font-size: 18px;
+    transition: background 0.5s;
+    border-radius: 8px;
+}
+
+.exit-btn:hover{
+    background: black;
 }
