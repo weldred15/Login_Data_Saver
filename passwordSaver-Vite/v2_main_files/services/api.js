@@ -1,8 +1,7 @@
-// src/services/api.js
 import { API_URL } from '../utils/constants';
 
 export const api = {
-    // Get all entries (without passwords for security)
+    // Get all entries
     async getEntries() {
         try {
             const response = await fetch(API_URL);
@@ -16,27 +15,12 @@ export const api = {
         }
     },
 
-    // Get decrypted password for specific entry
-    async getPassword(id) {
-        try {
-            const response = await fetch(`${API_URL}/${id}/password`);
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
-            }
-            const data = await response.json();
-            return data.password;
-        } catch (error) {
-            console.error('Error fetching password:', error);
-            throw error;
-        }
-    },
-
     // Add new entry
     async addEntry(entryData) {
         try {
             const response = await fetch(API_URL, {
                 method: 'POST',
-                headers: {'Content-Type': 'application/json'},
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(entryData)
             });
 
@@ -57,7 +41,7 @@ export const api = {
         try {
             const response = await fetch(`${API_URL}/${id}`, {
                 method: 'PUT',
-                headers: {'Content-Type': 'application/json'},
+                headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(updateData)
             });
 

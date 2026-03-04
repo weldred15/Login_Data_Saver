@@ -2,8 +2,6 @@ import { useState } from 'react';
 import './TableToolbar.css';
 
 function TableToolbar({ onFilterChange, totalEntries, filteredEntries }) {
-
-    //creating the 4 fields that can be filtered
     const [filters, setFilters] = useState({
         searchTerm: '',
         searchField: 'all', // 'all', 'domain', 'username', 'notes'
@@ -11,21 +9,20 @@ function TableToolbar({ onFilterChange, totalEntries, filteredEntries }) {
         sortOrder: 'desc'   // 'asc', 'desc'
     });
 
-    //function to handle search alterations
+
+
     const handleSearchChange = (value) => {
         const newFilters = { ...filters, searchTerm: value };
         setFilters(newFilters);
         onFilterChange(newFilters);
     };
 
-    //function to handle filter adaptations
     const handleFilterChange = (field, value) => {
         const newFilters = { ...filters, [field]: value };
         setFilters(newFilters);
         onFilterChange(newFilters);
     };
 
-    //function to reset all search fields
     const clearFilters = () => {
         const resetFilters = {
             searchTerm: '',
@@ -37,7 +34,6 @@ function TableToolbar({ onFilterChange, totalEntries, filteredEntries }) {
         onFilterChange(resetFilters);
     };
 
-    //function dedicated to alter the order of a search or filter
     const toggleSortOrder = () => {
         handleFilterChange('sortOrder', filters.sortOrder === 'asc' ? 'desc' : 'asc');
     };

@@ -1,5 +1,3 @@
-
-
 export const API_URL = 'http://localhost:3001/api/entries';
 
 export const INITIAL_ENTRY_STATE = {
@@ -7,11 +5,4 @@ export const INITIAL_ENTRY_STATE = {
     username: '',
     pword: '',
     notes: ''
-};
-
-export const INITAL_BACKGROUND_STATE = {
-    id: 0,
-    color1: '#ffffff',
-    color2: '#ffffff',
-    degree: 90
 };
